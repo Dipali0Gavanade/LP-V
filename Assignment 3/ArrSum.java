@@ -50,7 +50,13 @@ public class ArrSum {
         System.out.println(
             "Intermediate sum at process " + rank + " is " + recieve_buffer[0]
         );
-        
+        /* for (int i = 0; i < size; i++) {
+            if (rank == i) {
+                System.out.println("Intermediate sum at process " + rank + " is " + recieve_buffer[0]);
+            }
+            MPI.COMM_WORLD.Barrier();
+        }
+        */
 
         //  Gather data from processes
         MPI.COMM_WORLD.Gather(
